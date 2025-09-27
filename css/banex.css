@@ -1,0 +1,90 @@
+/* Estilo general del banner */
+.bannernoti {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de los elementos */
+.banner-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+/* Elemento individual */
+.banner-item {
+    
+    display: flex;
+    flex-wrap: nowrap;
+   width: 200px;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, #1a1a1a, #acacac);
+    color: white;
+}
+
+
+
+
+
+/* Lado izquierdo */
+.banner-item-izquierda {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-noti-img {
+    width: 80%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+   background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+	
+}
+
+/* Controles del banner */
+.banner-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.banner-controls button {
+    background-color: rgba(0, 0, 0, 0.219);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background-color 0.3s ease;
+}
+
+.banner-controls button:hover {
+    
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.banner-controls .prev {
+    margin-left: 10px;
+}
+
+.banner-controls .next {
+    margin-right: 10px;
+}
