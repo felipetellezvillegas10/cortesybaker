@@ -2892,7 +2892,8 @@ border-radius: 5px;
     flex-direction: column;
     flex-wrap: wrap;
     box-sizing: border-box;
-    gap: 20px;
+    
+	
 }
 
 .equipo-fotos-lados div {
@@ -2931,7 +2932,7 @@ border-radius: 5px;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+   
 }
 
 .equipo-fotos-center div {
