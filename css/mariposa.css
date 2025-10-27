@@ -18,6 +18,10 @@ body
 	box-sizing: border-box;
 	
 }
+
+
+
+
 .contenedor
 {
 	width: 100%;
@@ -46,6 +50,10 @@ header
 	/*background: linear-gradient(rgb(1, 7, 37) 60%,rgb(3, 2, 53));*/
 
 }
+
+
+
+
 .boton-ingles {
       min-width: 80px;            /* antes tenías width:80px (si quieres fijo, cambialo de nuevo) */
       height: 46px;
@@ -58,7 +66,7 @@ header
       text-align: center;
       z-index: 9999;
       margin-top: 540px;          /* si quieres cambiar la posición, ajusta esto */
-      margin-left: 90%;
+      margin-left: 20px;
       text-decoration: none;
       border-radius: 6px;
       box-sizing: border-box;
@@ -87,7 +95,10 @@ header
       outline-offset: 2px;
       border-radius: 4px;
     }
-
+.logo2 
+{
+	display: none;
+}
 .logo
 {
 	/*width: 20%;*/
@@ -96,7 +107,7 @@ header
 	/*background-color: rgb(12, 29, 54);*/
 	/*box-shadow: 0px 4px 0px 0px rgba(0, 0, 0,0.5);*/
 	min-width: 10px;
-	background-color: rgba(134, 17, 17, 0);
+	background-color: rgba(80, 17, 17, 0);
 	color: rgb(255, 255, 255);
 	font-size: 2rem;
 	line-height: 0px;
@@ -113,7 +124,7 @@ background-image:  /*linear-gradient(rgba(204, 170, 135, 0.555), rgba(54, 39, 25
 	/*border-bottom: solid 4px   rgb(87, 59, 24);*/
 	overflow: hidden;
 position: relative;
-top: 10px;
+top: -20px;
 	
 }
 .logo img
@@ -143,104 +154,91 @@ top: 10px;
 	width: 100%;
 	/*min-width: 700px;*/
 	z-index: 1;
-	color: rgb(209, 179, 80);
+	color: rgb(209, 179, 80); color: #cfcfcf;
 	font-size: 3rem;
 	line-height: 30px;
-	height: 94px;
+	height: 108px;
 	text-align: center;
 display: block;
 position: absolute;
 right: 0px;
 top: 0px;
 	/*box-shadow: 4px 0px 0px 0px rgb(0, 0, 0);*/
-	background-color: rgba(0, 0, 0, 0.007);
+	background-color: rgba(51, 51, 51, 0.925);
 	border-bottom:solid rgb(207, 170, 90) 0px;
 }
-
-.contacto-head{
-	width: 100%;
-	display: flex;
-	
-	background-color: #c40000;
-}
-.cel
-{
-display: flex;
-flex-wrap: wrap;
-width: 65%;
-height: 40px;
-background-color: #ffffff00 ;
-
-align-items: center;
-justify-content: start;
-font-weight: lighter;
-
-}
-.cel2
-{
-display: flex;
-flex-wrap: wrap;
-width: 35%;
-height: 40px;
-background-color: #00000000;
-
-align-items: center;
-justify-content: end;
-font-weight: lighter;
-
-
+.contacto-head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c40000;
+    padding: 0 10px;
+    height: 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
-.cel2 a
-{
-
-font-size: 12px;
-	display: flex;
-	background-color: rgba(14, 0, 141, 0);
-	color: rgb(255, 255, 255);
-	position: relative;
-	box-sizing: border-box;
-	text-decoration: none;
-	font-family:'Open Sans', sans-serif;
-	height: 15px;
-	text-align: center;
-	padding:0px 30px;
-	justify-content: center;
-	align-items: center;
-	/*line-height: 10PX;*/
- }
-.cel a{
-	font-size: 12px;
-	display: flex;
-	background-color: rgba(15, 80, 58, 0);
-	color: rgb(255, 255, 255);
-	position: relative;
-	
-	text-decoration: none;
-	font-family:'Open Sans', sans-serif;
-	height: 15px;
-
-	padding:0px 50px;
-	justify-content: start;
-	align-items: center;
-	/*line-height: 10PX;*/
+.cel, .cel2 {
+    display: flex;
+    align-items: center;
+    font-weight: lighter;
+    background-color: transparent;
 }
 
-.cel-caj
-{
-	border-left: solid #ffffff 2px;
-	
-	
+.cel {
+    justify-content: flex-start;
+    gap: 15px;
 }
 
-.correo-caj
-{
-	
-	
-	text-align: left;
-
-	height: 20px;
+.cel2 {
+    justify-content: flex-end;
 }
+
+.cel a, .cel2 a {
+    font-size: 12px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.cel-caj {
+    border-left: 2px solid #fff;
+    padding-left: 10px;
+}
+
+/* -------- RESPONSIVE sin desconfigurarse -------- */
+@media (max-width: 768px) {
+    .contacto-head {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 4px 5px;
+        gap: 2px;
+    }
+
+    .cel, .cel2 {
+        justify-content: center;
+        flex-wrap: nowrap;
+        height: 20px;
+    }
+
+    .cel a, .cel2 a {
+        font-size: 10px;
+        padding: 0 5px;
+    }
+
+    .cel-caj {
+        border: none;
+        padding-left: 0;
+    }
+}
+
 .menutitu
 {
 margin-top: 0px;
@@ -961,7 +959,7 @@ position: relative;
     color: #ffffff;
     line-height: 1.6;
     box-sizing: border-box;
-	background-color: #353535;
+	background-color: #ff0000;
 	z-index: 1;
 	box-shadow: 0px 2px 70px rgba(0, 0, 0, 0.158);
 }
@@ -970,7 +968,7 @@ position: relative;
 
 	height: 100%;
 	padding: 30px 0px;
-	font-size: 15px;
+	font-size: 18px;
 	display: flex;
 	position: relative;
 	font-weight: normal;
@@ -985,7 +983,7 @@ position: relative;
 	justify-content: center;
 	align-items: center;
 	padding: 30px 0px;
-	font-size: 15px;
+	font-size: 18px;
 	
 	position: relative;
 }
@@ -1016,7 +1014,7 @@ position: relative;
 	display: block;
 	bottom: 5px;
 	right: 30px;
-	background-color: #161616;
+	background-color: #f10000;
 	z-index:0 ;
 }
 
@@ -1033,6 +1031,72 @@ background-color: #ffffff;
   overflow: hidden;
   gap: 0;
 }
+/* === RESPONSIVE ADMISION === */
+@media (max-width: 1024px) {
+  /* Oculta la imagen */
+  .adfoto-home,
+  .adimg-home {
+    display: none !important;
+  }
+
+  /* Reorganiza el contenedor principal */
+  .admisioncaja-home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Hace que el texto ocupe todo el ancho */
+  .adtext-home {
+    width: 100%;
+    min-height: auto;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  /* Elimina el diseño en dos columnas */
+  .adtext-lef,
+  .adtext-derecha {
+    width: 100% !important;
+    height: auto;
+    padding: 0;
+    display: block;
+  }
+
+  .adtext-lef p,
+  .adtext-derecha p {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  /* Caja decorativa opcional: ajusta o quita */
+  .caja-decorativa-home {
+    display: none;
+  }
+}
+
+/* Versión para celulares pequeños */
+@media (max-width: 600px) {
+  .adtext-home {
+    padding: 25px 20px;
+    font-size: 14px;
+  }
+
+  .adtext-lef p,
+  .adtext-derecha p {
+    font-size: 14px;
+  }
+}
+
 
 /* Estilos base de los triángulos */
 .triangulo {
@@ -1050,7 +1114,7 @@ background-color: #ffffff;
 .triangulo .titulo {
   z-index: 2;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 24px;
   pointer-events: none;
 }
 
@@ -1072,9 +1136,14 @@ background-color: #ffffff;
 
 .triangulo .contenido h3 {
   margin-top: 0;
-  font-size: 20px;
+  font-size: 26px;
 }
 
+.triangulo .contenido p {
+ 
+  font-size: 22px;
+  font-weight: normal;
+}
 /* Triángulo superior */
 .mision {
   background-color: #292929;
@@ -1311,99 +1380,114 @@ padding-right: 15%;
 
 
 }
-
-/*mapas*/
-.mapas
-{
-	width: 100%;
-	
-	background-color: #ffffff;
-	display: flex;
-
-}
-.mapas1
-{
-	width: 100%;
-	height: 100%;
-	background-color: #ffffff;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 20px;
-
-}
-.maa-conten{
-	width: 100%;
-	
-	background-color: rgb(255, 255, 255);
-	display: flex;
-	position: relative;
-	flex-wrap: wrap;
-	
-	
-
-}
-.maa-conten div
-{
-	width: 50%;
-	
-	background-image: linear-gradient(rgba(87, 87, 87, 0.233), rgba(88, 88, 88, 0.178)), url(../img/bandera-tela-estados-unidos-america_46370-2223.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: block;
-	overflow: hidden;
-	height: 420px;
-	box-sizing: border-box;
-	
-}
-.maa-conten p
-{
-	width: 40%;
-	
-	background-color: rgba(255, 255, 255, 0);
-	display: flex;
-	  font-family: "Montserrat", sans-serif;
-	margin-left: 100px;
-	box-sizing: border-box;
-	margin-bottom: 70px;
-	padding: 30px;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	
+/* === SECCIÓN MAPAS === */
+.mapas {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.maa-conten div img
-{
-	width: 100%;
-	
-	
-	
-	
+.mapas1 {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.img-map1
-{
-
+.maa-conten {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.img-map2 
-{
-
-position: relative;
-
-margin-left: auto;
+.img-map1 {
+  width: 45%;
+  background-image: linear-gradient(rgba(87, 87, 87, 0.233), rgba(88, 88, 88, 0.178)),
+    url(../img/bandera-tela-estados-unidos-america_46370-2223.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 420px;
+  box-sizing: border-box;
+  border-radius: 12px;
 }
-.img-map3
-{
 
+.maa-conten p {
+  width: 50%;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-/*.texto-flotante2-history p
-{
-	/*border-left: 2px solid black;
-	background-color: #1f155f;
-	
+
+/* Imagen dentro de los divs */
+.maa-conten div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 12px;
 }
-/
+
+/* === MEDIA QUERIES RESPONSIVE === */
+
+/* 🧩 Pantallas medianas (tablets) */
+@media screen and (max-width: 992px) {
+  .maa-conten {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .maa-conten div {
+    width: 90%;
+    height: 350px;
+  }
+
+  .maa-conten p {
+    width: 90%;
+    font-size: 0.95rem;
+    margin: 10px 0;
+  }
+  
+}
+
+/* 📱 Pantallas pequeñas (celulares) */
+@media screen and (max-width: 600px) {
+  .maa-conten div {
+    width: 100%;
+    height: 300px;
+  }
+
+  .maa-conten p {
+    width: 95%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
 
 /* Contenedor de las tarjetas */
 .container-card {
@@ -1434,7 +1518,7 @@ margin-bottom: 20px;
 	flex-wrap: wrap;
 	align-items: start;
 	justify-content: center;
-	background-color: #21c8d400;
+	background-color:  #21c8d400;
 	gap: 70px 20px;
 	position: relative;
 
@@ -1487,8 +1571,12 @@ margin-bottom: 20px;
   
   /* Texto */
   .card p {
-	color: #ffffff;
-	font-size: 15px;
+	color: #ffffffc2;
+	font-size: 16px;
+	font-weight: normal;
+	font-family: Montserrat, sans-serif;
+	padding: 20px;
+	text-align: justify;
 	
   }
 /*nuevo estilo*/
@@ -1502,12 +1590,12 @@ margin-bottom: 20px;
 .card {
   position: relative;
   z-index: 2; /* siempre por encima */
-  background: rgba(206, 0, 0, 0.993);
+  background: linear-gradient(180deg, #808080, #3a3a3a);
   width: 280px;
   min-height: 260px;
   padding: 40px 20px 20px;
   border-radius: 0;
-  text-align: center;
+  text-align:center;
   color: white;
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
@@ -1520,7 +1608,7 @@ margin-bottom: 20px;
   right: -15px;
   width: 80%;     /* la mitad del ancho */
   height: 80%;    /* la mitad de la altura */
-  background: #000;
+  background: rgba(206, 0, 0, 0.993);
   z-index: 1;     /* debajo de la tarjeta */
 }
 
@@ -1538,14 +1626,14 @@ margin-bottom: 20px;
   right: -15px;
   width: 80%;     /* la mitad del ancho */
   height: 80%;    /* la mitad de la altura */
-  background: #bd0000;
+  background:  rgba(206, 0, 0, 0.993);
   z-index: 1;     /* debajo de la tarjeta */
 }
 
 
   .boton-service
   {
-	width: 80px;
+	width: 170px;
 	height: 25px;
 	border-bottom: solid rgb(255, 106, 106) 3px;
 	color: #ffffff;
@@ -2042,7 +2130,7 @@ font-family: "Montserrat", sans-serif;
 	display: inline-flex;
 	/*min-height: 100px;*/
 	/*background-color: rgb(49, 43, 34);*/
-	background-image:linear-gradient( rgba(14, 14, 14, 0.733), rgba(131, 131, 131, 0.418)) ,url(../img/puente\ nuevo.jpg);
+	background-image:linear-gradient( rgba(22, 21, 34, 0.733), rgba(124, 123, 123, 0.418)) ,url(../img/puente\ nuevo.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom;
@@ -2079,6 +2167,7 @@ font-family: "Montserrat", sans-serif;
 color: rgb(230, 230, 230);
 font-weight: lighter;
 margin: 40px;
+font-size: 19px;
 text-align: justify;
 }
 
@@ -2095,6 +2184,77 @@ text-align: justify;
 	text-align: left;
 	
 }*/
+/* === RESPONSIVE ABOUT US === */
+@media (max-width: 1200px) {
+  .sec3-about {
+    padding: 60px 100px;
+  }
+
+  .sec3-about h1 {
+    font-size: 35px;
+  }
+
+  .sec3-about p {
+    font-size: 18px;
+    margin: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sec3-about {
+    padding: 50px 60px;
+    background-attachment: scroll; /* Evita el corte del fondo en móviles */
+  }
+
+  .sec3-about h1 {
+    font-size: 32px;
+  }
+
+  .sec3-about p {
+    font-size: 17px;
+    margin: 25px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec3-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+    text-align: center;
+    background-attachment: scroll;
+  }
+
+  .sec3-about h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .sec3-about p {
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec3-about {
+    padding: 30px 15px;
+  }
+
+  .sec3-about h1 {
+    font-size: 25px;
+  }
+
+  .sec3-about p {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+}
+
 .descarga3
 {
 	background-color: rgba(63, 51, 43, 0);
@@ -2699,193 +2859,172 @@ border-radius: 5px;
 
 
 
-/*equipo cuadro*/
-.equipo-sec
-{
-	width: 100%;
-	display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-flex-wrap: wrap;
-background-image:linear-gradient( rgba(22, 21, 34, 0.733), rgba(124, 123, 123, 0.418)) ,url(../img/puente\ nuevo.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-background-attachment: fixed; 
-min-height: 400px;
-box-sizing: border-box;
-
-
-}
-.equipo-cuadro
-{
-	width: 100%;
-	display: flex;
-justify-content: center;
-align-items:center;
-position: relative;
-/*background-color: #303030;*/
-
-}
-.equipo-fotos-center
-{
-	width: 30%;
-	background-color: rgba(102, 51, 153, 0);
-	display: flex;
-	flex-wrap: wrap;
-	
-	
-	
-	
-	
+/* EQUIPO SECCIÓN */
+.equipo-sec {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgba(22, 21, 34, 0.733), rgba(124, 123, 123, 0.418)), url(../img/puente\ nuevo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 400px;
+    box-sizing: border-box;
 }
 
-.equipo-fotos-lados
-{
-	width: 30%;
-	background-color: rgba(102, 51, 153, 0);
-	display: flex;
-	flex-wrap: wrap;
-	
-	
-	
-}
-.equipo-fotos-lados div
-{
-		width: 100%;
-	
-	/*background-image: linear-gradient( rgba(87, 22, 22, 0), rgba(131, 56, 56, 0)), url(../img/Jose\ Luis\ 1.jpeg.jpg);
-	background-position: center;
-	background-size: 100%;
-	background-repeat: no-repeat;*/
-	
-	display: flex;
-	
-	
-	         /* recorta lo que sobresale */
-	color: white;
-	background: #181818; 
-	height: 400px;
-	flex-wrap: wrap;
-	box-sizing: border-box;
-		flex-direction: column;   /* 👉 Apila h3 y p en columna */
-	justify-content: center;  /* 👉 Centra verticalmente el bloque completo */
-	align-items: center;      /* 👉 Centra horizontalmente */
-
-	
+.equipo-cuadro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
 }
 
-.equipo-fotos-lados div h3
-{
-	text-align: center;
-	 font-family: "Montserrat", sans-serif;
-	
-	 padding: 0 26px;
-	text-align: justify;
-	 margin: 0;
-	 display: block; 
-	
-}
-.equipo-fotos-lados div p
-{
-	padding: 40px 30px;
-	 margin: 0;
-	 display: block;  
-
-	background-color: #1f155f00;
-	text-align: justify;
-	  font-family: "Montserrat", sans-serif;
-	  font-size: 14px;
-	  font-weight: normal;
-	  color: rgb(206, 206, 206);
-	
-}
-.equipo-fotos-center div
-{
-	
-	width: 100%;
-	
-	/*background-image: linear-gradient( rgba(87, 22, 22, 0), rgba(131, 56, 56, 0)), url(../img/Jose\ Luis\ 1.jpeg.jpg);
-	background-position: center;
-	background-size: 100%;
-	background-repeat: no-repeat;*/
-	
-	display: flex;
-	
-	
-	         /* recorta lo que sobresale */
-	color: white;
-	background: #181818; 
-	height: 400px;
-	flex-wrap: wrap;
-	box-sizing: border-box;
-		flex-direction: column;   /* 👉 Apila h3 y p en columna */
-	justify-content: center;  /* 👉 Centra verticalmente el bloque completo */
-	align-items: center;      /* 👉 Centra horizontalmente */
-
-	
-}
-.equipo-fotos-center div img
-{
-	min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;         /* mantiene proporción sin distorsión */
-  object-position:top;   /* centra la imagen */
-  display: block;
-}
-.equipo-fotos-lados div img
-{
-	min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;         /* mantiene proporción sin distorsión */
-  object-position: top;   /* centra la imagen */
-  display: block;
+/* LADOS */
+.equipo-fotos-lados {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 20px;
 }
 
-.equipo-fotos-center div h3
-{
-	
-	text-align: center;
-	 font-family: "Montserrat", sans-serif;
-	
-	 padding: 0 26px;
-	text-align: justify;
-	 margin: 0;
-	 display: block;  
-	
-}
-.equipo-fotos-center div p
-{
-	padding: 40px 30px;
-	 margin: 0;
-	 display: block;  
-
-	background-color: #1f155f00;
-	text-align: justify;
-	  font-family: "Montserrat", sans-serif;
-	  font-size: 14px;
-	  font-weight: normal;
-	  color: rgb(206, 206, 206);
-	
+.equipo-fotos-lados div {
+    width: 100%;
+    background: #181818;
+    color: white;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
-.equipo-tex
-{
-	width: 50px;
-	background-color: #ac505000;
-	text-align: center;
-	position: relative;
-	color: white;
-	height: 184.5%;
-	align-items: center;
-	display: flex;
-	padding-top: 30px;
-	writing-mode: vertical-rl;   /* texto en vertical */
-	text-orientation: mixed;
-	transform: rotate(180deg); 
-	font-size: 1.5rem;
+.equipo-fotos-lados div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
 }
+
+.equipo-fotos-lados div h3,
+.equipo-fotos-lados div p {
+    padding: 10px 20px;
+    margin: 0;
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(206, 206, 206);
+}
+
+/* CENTRO */
+.equipo-fotos-center {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+}
+
+.equipo-fotos-center div {
+    width: 100%;
+    background: #181818;
+    color: white;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.equipo-fotos-center div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+.equipo-fotos-center div h3,
+.equipo-fotos-center div p {
+    padding: 10px 20px;
+    margin: 0;
+    text-align: justify;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(206, 206, 206);
+}
+/* TEXTO VERTICAL */
+.equipo-tex {
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    color: white;
+    font-size: 1.2rem;
+    padding-top: 30px;
+}
+
+/* MEDIA QUERIES RESPONSIVE */
+@media screen and (max-width: 1100px) {
+    .equipo-fotos-lados,
+    .equipo-fotos-center {
+        width: 100%;
+    }
+    .equipo-cuadro {
+        flex-direction: column;
+        align-items: center;
+    }
+    .equipo-fotos-lados div,
+    .equipo-fotos-center div {
+        height: auto;
+    }
+    .equipo-fotos-lados div img,
+    .equipo-fotos-center div img {
+        height: auto;
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .equipo-fotos-lados,
+    .equipo-fotos-center {
+        width: 100%;
+    }
+    .equipo-cuadro {
+        flex-direction: column;
+        align-items: center;
+    }
+    .equipo-fotos-lados div,
+    .equipo-fotos-center div {
+        height: auto;
+    }
+    .equipo-fotos-lados div img,
+    .equipo-fotos-center div img {
+        height: auto;
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .equipo-fotos-lados div h3,
+    .equipo-fotos-center div h3,
+    .equipo-fotos-lados div p,
+    .equipo-fotos-center div p {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+}
+
 
 
 /*secvoleybol*//* Estilo general para la sección de voleibol */
@@ -2919,7 +3058,7 @@ position: relative;
     justify-content: center;
 	
    /* background-color: #f2f2f2;*/
-   background-image: linear-gradient( rgba(87, 22, 22, 0), rgba(131, 56, 56, 0)), url(../img/puente\ nuevo.jpg);
+  background-image:linear-gradient( rgba(22, 21, 34, 0.733), rgba(124, 123, 123, 0.418)) ,url(../img/puente\ nuevo.jpg);
     position: relative;
     order: -1; /* Imagen a la izquierda */
 }
@@ -4031,118 +4170,188 @@ display: flex;
 	height: 100%;
 
 }
-
-/*pie d epagina*/
-
-.pie-de-pagina
-{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	min-height: 300px;
-	background-image:  linear-gradient(rgba(31, 30, 28, 0.904), rgba(27, 25, 22, 0.582)), url(../img/puente\ nuevo.jpg);
-	background-position: center ;
-	background-size: cover;
-}
-.pie-de-pagina1
-{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100%;
-	box-sizing: border-box;
-	background-color: #c7292900;
-	flex-wrap: wrap;
-	font-family: "Open Sans", sans-serif;
-font-weight: lighter;
-}
-.pie1
-{
-	width: 30%;
-	max-width: 300px;
-	height:300px;
-	padding-right: 40px;
-	padding-top: 40px;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #a5969600;
-position: relative;
-flex-wrap: wrap;
+/* --- Pie de página --- */
+.pie-de-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 300px;
+    background-image: linear-gradient(rgba(22, 21, 34, 0.733), rgba(124, 123, 123, 0.418)), url(../img/puente\ nuevo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
-.pie-logo
-{
-width: 100%;
-padding: 0px;
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: #5e5e5e00;
-}
-.pie-logo img
-{
-	width: 90px;
-	height: 90px;
-}
-.pie-logo p
-{
-	padding: 4px;
-	border-left: rgb(255, 255, 255) solid 3px;
-}
-.redes-social
-{
-width: 50px;
-
-background-color: #831e1e00;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-padding: 20px 20px;
-gap: 20px;
-}
-.redes-social img
-{
-	width: 40px;
-	height: 40px;
-}
-.pie2
-{
-	width: 40%;
-	padding: 20px;
-	background-color: #000e3a00;
-	border-left: solid #c90000 1px;
-	border-right: solid #c90000 1px;
-
-}
-.contactus-text
-{
-font-family: "Open Sans", sans-serif;
-font-weight: lighter;
+.pie-de-pagina1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    font-family: "Open Sans", sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    max-width: 1200px;
 }
 
-.pie3
-{
-width: 15%;
-flex-wrap: wrap;
-display: flex;
-justify-content: end;
-text-align: left;
-gap: 6px;
-padding: 15px;
-background-color: #00eeff00;
+.pie1 {
+    width: 25%;
+    min-width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.pie3 p
-{
-	width: 100%;
-	text-align: right;
-	justify-content: end;
-	
+.pie-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: left;
 }
+
+.pie-logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.pie-logo p {
+    font-size: 15px;
+    padding-left: 10px;
+    border-left: 3px solid #fff;
+}
+
+.pie2 {
+    width: 40%;
+    min-width: 260px;
+    padding: 20px;
+    border-left: 1px solid #c90000;
+    border-right: 1px solid #c90000;
+    text-align: left;
+}
+
+.contactus-text h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.contactus-text p {
+    font-size: 14px;
+    line-height: 1.6em;
+}
+
+.redes-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.redes-social img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.redes-social img:hover {
+    transform: scale(1.1);
+}
+
+.pie3 {
+    width: 20%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 20px;
+    text-align: right;
+}
+
+.pie3 p {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.pie3 p:hover {
+    color: #ffcbcb;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .pie-de-pagina1 {
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: center;
+    }
+
+    .pie1, .pie2, .pie3 {
+        width: 45%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pie-logo {
+        flex-direction: column;
+    }
+
+    .pie-logo p {
+        border-left: none;
+        border-top: 2px solid #fff;
+        padding-left: 0;
+        padding-top: 8px;
+    }
+
+    .pie3 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .redes-social {
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .pie-de-pagina1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .pie1, .pie2, .pie3 {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .pie-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contactus-text p {
+        font-size: 13px;
+    }
+
+    .pie3 p {
+        font-size: 14px;
+    }
+
+    .redes-social {
+        flex-direction: row;
+        gap: 15px;
+    }
+
 footer
 {
 	display: flex;
@@ -4425,27 +4634,50 @@ float: right;
 		/*min-width: 320px;*/
 		opacity: 1;
 	}
-
-	.logo
+.titulo.sticky {
+  position: fixed;
+  background: #000000cb; /* Cambia el color de fondo si quieres */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 29;
+  height: 140px;
+}
+.logo.sticky{
+	top: 10px;
+}
+	.logo2
 	{
-		/*width: 20%;*/
 		
-		height:100px;
-		/*background-color: rgb(12, 29, 54);*/
-		/*box-shadow: 0px 4px 0px 0px rgba(0, 0, 0,0.5);*/
-		min-width: 90px;
-		background-color: rgba(165, 153, 144, 0.815);
-		color: rgb(255, 255, 255);
-		font-size: 2rem;
-		line-height: 100px;
-	/*border-radius: 0px 0px 70px 0px;*/
-		z-index: 3;
-		display: inline-flex;
-		box-sizing: border-box;
-		/*border-right: solid 4px   rgb(87, 59, 24);*/
-		/*border-bottom: solid 4px   rgb(87, 59, 24);*/
-		overflow: hidden;
-	float: right;
+	min-width: 10px;
+	background-color: rgba(80, 17, 17, 0);
+	color: rgb(255, 255, 255);
+	font-size: 2rem;
+	line-height: 0px;
+/*border-radius: 0px 0px 70px 0px;*/
+background-image:  /*linear-gradient(rgba(204, 170, 135, 0.555), rgba(54, 39, 25, 0.74)), */url(../img/fondologo.png);
+/*background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+	background-position-y: 0%;*/
+	z-index: 3;
+	display: inline-flex;
+	-webkit-box-sizing: border-box;
+	/*border-right: solid 4px   rgb(87, 59, 24);*/
+	/*border-bottom: solid 4px   rgb(87, 59, 24);*/
+	overflow: hidden;
+position: relative;
+top: 10px;
+left: 100px;
+	
+}
+.logo2 img
+{
+	/*width: 200px;*/
+	max-width: 900px;
+	height: 73px;
+	/*margin-top: -26px;
+	
+	margin-left: -18px;*/
+	opacity: 1;
 		
 	}
 	.logo img
@@ -4478,8 +4710,8 @@ margin-top: 0px;
 		color: rgba(22,22,22,0.5);
 		font-size: 2rem;
 		line-height: 80px;
-		height: 100px;
-		background-color: rgb(53, 45, 35);
+		height: 140px;
+		background-color: rgb(54, 54, 54);
 		
 	}
 
@@ -4755,6 +4987,305 @@ right: -75px;
 	margin-top: 0px;
 	
 }
+	
+	.boton
+	{
+		display: block;
+		width: 150px;
+		height: 90px;
+		/*background-color: rgb(12, 33, 128);*/
+		text-align: center;
+		line-height: 80px;
+		font-weight: regular;
+		font-size: 27px;
+		color: white;
+		border-radius: 30px;
+		margin-top: 10px;
+		float: left;
+		margin-right: 20px;
+	
+		
+		
+	}
+
+	.menu1
+	{
+		display: block;
+		width: 100%;
+		height: 650px;
+		position: relative;
+
+		
+		line-height: 70px;
+		background-color: rgba(54, 54, 54, 0.747);
+		
+	}	
+	.menu1 li
+{
+	width: 80%;
+/*	min-width: 50px;*/
+	height: 50px;
+	/*background-color: rgba(5, 8, 59, 0.8);*/
+	text-align: left;
+	line-height: 50px;
+	margin: 10px 18px;
+	list-style: none;
+	font-size: 1.5rem;
+	color: white;
+	display: block;
+	border-radius: 0px;
+}
+
+.menu1 li:hover
+{
+	text-decoration: underline;
+	background-color: rgba(22,22,22,0.5);
+	color: white;
+}
+
+	.seccion1
+	{
+		width: 100%;
+
+		box-sizing: border-box;
+
+	}
+	/*.slideree input[type="radio"]:checked +label {
+		background-color: rgb(177, 159, 133);
+		border: 2px
+	 solid rgb(255, 255, 255);
+	 color: aliceblue;
+	}*/
+	.slideree input[type="radio"] +label {
+		height: 50px;
+
+		width: 85px;
+
+	}
+	.slideree
+	{
+		height: 470px;
+		top: -10px;
+	}
+/*letras de banner*/
+.tituban
+{
+	display: block;
+	text-align: center;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+	height: 600px;
+	color: rgb(255, 255, 255);
+	font-size: 42px;
+font-family: 'Roboto', sans-serif;
+top: 100px;
+	line-height: 400px;
+	position: absolute;
+
+}
+.textobanner
+{
+	
+	width: 80%;
+	
+	box-sizing: border-box;
+	/*padding-left: 50px;*/
+	
+/*background-color: rgb(3, 12, 39);*/
+
+	/*background-position-y: 50%;
+	background-position-x: 0%;*/
+	/*text-shadow: -4px 5px 9px rgb(124, 124, 124);*/
+
+	color: rgb(255, 255, 255);
+
+	display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+background-color: #1a1b5300;
+	
+	font-size: 34px;
+font-family: '', serif;
+font-weight: 400;
+z-index: 3;
+
+
+}
+.slid1
+{
+height: 390px;
+top: 90px;
+}
+.sec5im img
+{
+	width: 180px;
+	height: 100%;
+	margin-top: 0px;
+	
+}
+.sec3
+{
+	
+	padding: 70px 0px;
+
+}
+.sec3caja
+{/*
+	width: 210px;
+height: 450px;
+display: inline-block;
+    overflow: hidden;
+	background-color: white;
+	margin: 20px 20px;
+	border-radius: 10px 10px 10px 10px;
+	text-align: left;*/
+	width: 180px;
+	height: 292px;
+	display: inline-block;
+		
+		background-color: rgb(185, 151, 107);
+		margin: 20px 20px;
+		border-radius: 10px 10px 10px 10px;
+		text-align: center;
+		
+}
+.sec3im
+{
+
+width: 180px;
+height: 252px;
+display: block;
+overflow: hidden;
+    margin: 0px auto;
+   /* border: rgb(20, 18, 18) solid 4px;*/
+    border-radius: 10px 10px 0px 10px 0px;
+    line-height: 100px;
+background-color: rgb(218, 196, 163);
+
+}
+.sec3im p
+{
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	font-size: 0.8rem;
+	transform: rotate(-45deg);
+	background-color: rgba(0, 0, 0, 0.664);
+	/*background-color: rgba(0, 0, 0, 0.616);*/
+	color: blanchedalmond;
+	border-radius: 0px 0px 0px 0px;
+	align-items:center;
+display: flex;
+	box-sizing: border-box;
+	justify-content:center;
+bottom: -10px;
+right: -75px;
+}
+.sec3im img
+{
+	width: 180px;
+	margin-top: 0px;
+	
+}
+.sec8
+{
+	
+	padding: 70px 0px;
+
+}
+.sec8caja
+{/*
+	width: 210px;
+height: 450px;
+display: inline-block;
+    overflow: hidden;
+	background-color: white;
+	margin: 20px 20px;
+	border-radius: 10px 10px 10px 10px;
+	text-align: left;*/
+	width: 180px;
+	height: 315px;
+	display: inline-block;
+		
+		background-color: rgb(185, 151, 107);
+		margin: 20px 20px;
+		border-radius: 10px 10px 10px 10px;
+		text-align: center;
+		
+}
+.sec8 h1{
+	margin-bottom: 100px;
+
+	
+
+
+}
+.descarga8
+{
+	/*background-color: None;
+	width: 150px;
+	height: 50px;
+	margin: 0px 20px;
+	color: rgb(97, 97, 97);
+	font-size: 1rem;
+	text-align: left;
+	text-underline-offset: 0.2em;
+	text-decoration: underline ;*/
+	background-color: rgba(63, 51, 43, 0);
+	width: 100px;
+	height: 25px;
+	line-height: 25px;
+	margin: 10px auto;
+	color: rgb(0, 0, 0);
+	font-size: 1rem;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	border-radius: 20px;
+	float: left;
+	
+	
+}
+.sec8im
+{
+
+width: 180px;
+height: 260px;
+display: block;
+overflow: hidden;
+    margin: 0px auto;
+   /* border: rgb(20, 18, 18) solid 4px;*/
+    border-radius: 10px 10px 0px 10px 0px;
+    line-height: 100px;
+background-color: rgb(218, 196, 163);
+border-bottom: solid 5px rgb(209, 184, 164);
+}
+.sec8im p
+{
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	font-size: 0.8rem;
+	transform: rotate(-45deg);
+	background-color: rgba(0, 0, 0, 0.664);
+	/*background-color: rgba(0, 0, 0, 0.616);*/
+	color: blanchedalmond;
+	border-radius: 0px 0px 0px 0px;
+	align-items:center;
+display: flex;
+	box-sizing: border-box;
+	justify-content:center;
+bottom: -10px;
+right: -75px;
+}
+.sec8im img
+{
+	width: 180px;
+	height: 100%;
+	margin-top: 0px;
+	
+}
 	.objetorigth
 	{
 		width: 300px;
@@ -4767,7 +5298,7 @@ right: -75px;
 		line-height: 30px;
 	float: left;
 	position: absolute;
-	top: 100px;
+	top: 140px;
 	display: flex;
 		left: -300px;
 		z-index: 2;
@@ -4798,12 +5329,12 @@ right: -75px;
 	{
 		display: block;
 		width: 100%;
-		height: 450px;
+		height: 650px;
 		position: relative;
 
 		
 		line-height: 70px;
-		background-color: rgba(53, 22, 2, 0.747);
+		background-color: rgba(22, 22, 22, 0.747);
 		
 	}	
 	.menu1 li
@@ -5128,104 +5659,12 @@ right: 0px;
 	}
 	
 
-	footer
-	{
-		width: 100%;
-		
-		font-size: 2rem;
-		line-height: 60px;
-	}
-	.cajaderecha{
-		width: 100%;
-
-	}
-	.cajaizquierda
-	{
-		width: 100%;
-	}
-	.cajacontacto
-	{
-		width: 90%;
-		/*min-width: 200px;
-		min-height: 300px;*/
-	vertical-align: top;
-	background-color: rgba(17, 66, 131, 0);
-		box-sizing: border-box;
-		padding: 16px 24px;
-		font-size: 1.2rem;
-		/*line-height: 2.5rem;*/
-	/*background-color: rgba(0, 0, 0, 0.363);*/
-		color: white;
-		margin: 0px auto;
-		font-family: 'Roboto', sans-serif;
-		display: flex;
-		flex-wrap: wrap;
-		/*border-radius: 50px;*/
-	/*flex-direction: column;*/
-	/*	min-width: 300px;*/
-		border-radius: 30px;
-		background-color: #ff02ea00;
-		
-	
-		
-	}
-	.cajacontactohijo{
-		width: 100%;
-		background-color: rgba(36, 173, 127, 0);
-		margin: 10px auto;
-	flex-wrap: wrap;
-	display: flex;
-	
-	
-	}
-	.cajacontactop{
-	width: 100%;
-	box-sizing: border-box;
-	display: flex;
-	background-color: rgba(27, 27, 128, 0);
-	
-	} 
-	.cajaizquierda h1{
-		background-color: none;
-	background-color: rgba(46, 37, 27, 0);
-		margin: 20px auto;
-		color: rgb(255, 255, 255);
-		font-size: 2.3rem;
-
-		
-		
-	}
-	.cajaizquierda h7
-	{background-color: #3b2a1700;
-	/*width: 65%;*/
-	line-height: 35px;
-		margin: 0px 10px;
-		font-weight: lighter;
-		text-align: left;
-		font-size: 1.4rem;
-		display: flex;
-		align-items: center;
-		/*background-color: rgba(82, 51, 38, 0);*/
-		
-	
-	}
-	.cajaizquierda h3
-	{
-		
-	/*width: 20%;
-	min-width: 150px;*/
-		background-color: rgba(243, 198, 52, 0);
-		text-align: left;
-		margin:0px  0px;
-		font-weight: normal;
-		font-size: 1.8rem;	
-		display: flex;
-		line-height: 35px;
-	}
 
 	#selector1:checked ~ .objetorigth
 {
 left: 0px;
 background-color: none;
 } 
+
+
 }
