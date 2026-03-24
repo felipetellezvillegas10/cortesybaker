@@ -20,7 +20,7 @@ if(isset($_POST['enviar'])){
     $telefono = $_POST['telefono'];
     $mensaje = $_POST['mensaje'];
 
-    $destino = "office@cbtax.net";
+    $destino = "felipetellezvillegas@gmail.com";
     $asunto = "Nuevo mensaje desde la web";
 
     $contenido = "Nombre: " . $nombre . "\n";
